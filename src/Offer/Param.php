@@ -27,6 +27,11 @@ class Param
     protected $value;
 
     /**
+     * @var string
+     */    
+    protected $ozoneId;
+
+    /**
      * @return bool
      */
     public function isValid()
@@ -110,6 +115,25 @@ class Param
     public function setValue($value)
     {
         $this->value = $value;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getOzoneId()
+    {
+        return $this->ozoneId;
+    }
+
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setOzoneId($ozoneId)
+    {
+        $this->ozoneId = $ozoneId;
 
         return $this;
     }
